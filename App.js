@@ -1,10 +1,9 @@
-import Login from "./src/screens/login/login.jsx";
-import Registro from "./src/screens/registro/registro.jsx";
+import Routes from "./src/routes.js";
 
 export default function App() {
 
   return (<>
-        <Registro  />
+        <Routes  />
       </>
   );
 }

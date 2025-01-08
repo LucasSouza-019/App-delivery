@@ -5,9 +5,10 @@ import TextBox from "../../components/textbox/textbox.jsx";
 import  Button  from "../../components/button/button.jsx";
 
 
-function Registro(){
-    return <ScrollView>
+function Registro(props){
+    return <>
     <View style={styles.container}>
+        <ScrollView style={styles.scrollview}>
       <Header texto="Crie sua conta."/>
 
     <View style={styles.formGroup}>
@@ -32,17 +33,13 @@ function Registro(){
             </View> 
 
             <View style={styles.form}>
-            <Button texto="Próximo Passo"/>
+            <Button texto="Próximo Passo" onPress={() => props.navigation.navigate("registroEnde")}/>
             </View> 
     </View>
-
-             <View style={styles.footer}>
-                <TouchableOpacity>
-            <Text style={styles.footerText}>Acessar minha conta</Text>
-            </TouchableOpacity>
-            </View>
-</View>
-    </ScrollView>
+        </ScrollView>
+    </View>
+ 
+</>
 }
 
 export default Registro;

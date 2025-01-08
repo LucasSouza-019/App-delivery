@@ -3,30 +3,41 @@ import { styles } from "./login.style.js";
 import Header from "../../components/header/header.jsx";
 import TextBox from "../../components/textbox/textbox.jsx";
 import  Button  from "../../components/button/button.jsx";
+import { useState } from "react";
 
-function Login(){
+function Login(props){
+
+        const [email, setEmail] = useState("");
+        const [senha, setSenha] = useState("");
+
+        function  ProcessarLogin(){
+                
+        }
+
     return <View style={styles.container}>
       <Header texto="Entre em sua Conta."/>
 
     <View style={styles.formGroup}>
             <View style={styles.form}>
-                    <TextBox label="E-mail"/>
+                    <TextBox label="E-mail" onChangeText={(texto) => setEmail(texto)} 
+                        value={email}/>
             </View>  
 
             <View style={styles.form}>
-            <TextBox label="Senha" isPassword={true}/>
+            <TextBox label="Senha" isPassword={true} onChangeText={(texto) => setSenha(texto)} 
+                        value={senha}/>
             </View> 
 
             <View style={styles.form}>
-            <Button texto="Acessar"/>
+            <Button texto="Acessar" onPress={ProcessarLogin}/>
             </View> 
     </View>
 
-             <View style={styles.footer}>
-                <TouchableOpacity>
+        <View style={styles.footer}>
+            <TouchableOpacity onPress={() => props.navigation.navigate("registro") }>
             <Text style={styles.footerText}>Criar minha conta</Text>
             </TouchableOpacity>
-            </View>
+        </View>
 </View>
     
 }

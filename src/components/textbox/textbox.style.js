@@ -3,7 +3,7 @@ import { COLORS, FONT_SIZE } from "../../constants/theme"
 export const styles = {
     input:{
         width: "100%",
-        backgroundColor: COLORS.medium_gray,
+        backgroundColor: COLORS.white,
         padding: 10,
         borderRadius: 6,
         borderWidth: 1,

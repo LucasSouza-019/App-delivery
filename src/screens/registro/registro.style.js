@@ -20,16 +20,22 @@ export const styles = {
 
     footer:{
         width: "100%",
+        backgroundColor: COLORS.red,
         position: "absolute",
         bottom : 0,
-        marginBottom: 30
+        padding : 20,
+        height: 80
+    },
+
+    scrollview: {
+        width : "100%"
     },
 
     footerText:{
         textAlign: "center",   
-        color: COLORS.dark_gray,
-        fontSize: FONT_SIZE.md 
+        color: COLORS.white,
+        fontSize: FONT_SIZE.md,
+        textDecoration: "underline"
     }
-
 
 }
