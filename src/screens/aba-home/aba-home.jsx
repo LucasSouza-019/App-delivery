@@ -1,4 +1,4 @@
-import { Text, Image, View, ScrollView } from "react-native";
+import { Text, Image, View, ScrollView, TouchableOpacity } from "react-native";
 import {styles} from "./aba-home.style.js";
 import icons from "../../constants/icons.js";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -19,8 +19,10 @@ function AbaHome(props){
 
     return <SafeAreaView style={styles.container}>
         <View  style={styles.headerBar}>
-           <Image source={icons.logo} style={styles.logo}/> 
+           <Image source={icons.logo} style={styles.logo}/>
+           <TouchableOpacity onPress={()=> props.navigation.navigate("checkout")} >
            <Image source={icons.cart} style={styles.cart}/>      
+           </TouchableOpacity> 
         </View>
         <View style={styles.busca}>
             <TextBox placeholder="Qual a pedida de hoje?" onChangeText={(texto) => setBusca(texto)} 

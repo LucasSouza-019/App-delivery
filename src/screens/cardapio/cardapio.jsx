@@ -5,6 +5,8 @@ import icons from "../../constants/icons.js";
 import Produto from "../../components/produto/produto.jsx";
 
 function Cardapio(props){
+
+
     return<View style={styles.container}>
         <ScrollView>
             <View style={styles.containerFoto}>

@@ -30,4 +30,12 @@ export const styles = {
         fontSize: FONT_SIZE.sm,
         marginTop: 8
     },
+    delete:{
+      height: 28,
+      width: 28
+  },
+  contaninerdelete:{
+    marginTop:8,
+    alignItems: "flex-end"
+  },
 }

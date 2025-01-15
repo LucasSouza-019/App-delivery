@@ -6,7 +6,7 @@ import Banners from "../../components/Banners/banners.jsx";
 import Restaurante from "../../components/restaurante/restaurante.jsx";
 
 
-function AbaFavoritos(){
+function AbaFavoritos(props){
         return<View style={styles.container}>
             <FlatList data={restaurantes} 
                     keyExtractor={(restaurante) => restaurante.id}

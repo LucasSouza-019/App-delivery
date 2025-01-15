@@ -17,6 +17,16 @@ function Produto(props) {
                    new Intl.NumberFormat("pt-BR", 
                     { style: "currency", currency: "BRL" }).format(props.valor)
                 }</Text>
+
+
+                {
+                       props.onClickDelete && 
+                <TouchableOpacity style={styles.contaninerdelete} 
+                    onPress={() => props.onClickDelete()}>
+                    <Image source={icons.remove} style={styles.delete}/>
+                </TouchableOpacity>
+
+                }
         </View>
 
     

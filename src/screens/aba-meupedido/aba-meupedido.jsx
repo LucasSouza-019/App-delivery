@@ -3,9 +3,15 @@ import {styles} from "./aba-meupedido.style.js";
 import icons from "../../constants/icons.js";
 import {pedidos} from "../../constants/dados.js"
 import Pedido from "../../components/pedido/pedido.jsx";
+import { useLinkProps } from "@react-navigation/native";
+
+function AbaMeuspedidos(props) {
+
+    function Detalhepedido(){
+        props.navigation.navigate("detalhe-pedido")
+    }
 
 
-function AbaMeuspedidos() {
     return <View style={styles.container}>
         <FlatList data={pedidos}
             keyExtractor={(ped) => ped.id}
@@ -15,7 +21,8 @@ function AbaMeuspedidos() {
                     nome={item.nome}
                     valor={item.vl_total}
                     dt_pedido={item.dt_pedido}
-                    status={item.status} />
+                    status={item.status} 
+                    onClickPedido={Detalhepedido}/>
             }}
 
             contentContainerStyle={styles.containerList}

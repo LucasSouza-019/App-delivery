@@ -10,6 +10,9 @@ import dados from "../assets/meus-dados.png";
 import logout from "../assets/logout.png";
 import back2 from "../assets/back2.png";
 import location from "../assets/location.png";
+import produto from "../assets/produto-pizza.png"
+import menos from "../assets/menos.png";
+import mais from "../assets/mais.png";
 
 import abaHome from "../assets/aba-home.png";
 import abafavorito from "../assets/aba-favorito.png";
@@ -18,5 +21,5 @@ import abaPerfil from "../assets/aba-perfil.png";
 
 
 
-export default {back, remove, logo, cart, favoritoFull, empty,back2,location,
+export default {menos, mais,produto,back, remove, logo, cart, favoritoFull, empty,back2,location,
     endereco, more, dados, logout, abaHome, abafavorito, abaPedido, abaPerfil};
